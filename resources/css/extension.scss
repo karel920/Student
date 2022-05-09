@@ -1,0 +1,150 @@
+table.t_info {
+    width: 300px;
+    background: #f1370c;
+    border-collapse: collapse;
+    border: 1px solid #f1370c;
+    margin: 1px;
+
+    th {
+        color: #FFF;
+        text-align: center;
+        height: 25px;
+        line-height: 25px;
+        border-top: 0;
+        border: 1px solid #f1370c;
+        background: none;
+    }
+
+    td {
+        height: 20px;
+        background: #FFFFFF;
+        text-align: center;
+        border: 1px solid #f1370c;
+        line-height: 20px;
+    }
+}
+
+table {
+    white-space: nowrap;
+}
+.card-body {
+    overflow: scroll;
+}
+.content-wrapper {
+    height: auto;
+    background-color: transparent;
+}
+li.page-link.disabled {
+    color: lightgray;
+}
+li.page-link.active {
+    color: white;
+    background-color: #007bff;
+}
+
+.custom-overlay-wrapper {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+.nav-dark-blue {
+    background-color: #2e476f;
+    border: none;
+    a {
+        color: white;
+    }
+}
+
+.main-footer {
+    padding: 2px;
+    border: none;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    a {
+        color: white;
+    }
+}
+
+.content-header {
+    font-weight: bold;
+}
+
+.pagination {
+    width: fit-content;
+    max-width: 100%;
+    overflow: scroll;
+}
+
+// custom components
+.wrapper {
+    background-color: lightgray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home-avatar {
+    img {
+        width: 160px;
+        height: 160px;
+        border: 2px solid #000;
+        border-radius: 50%;
+    }
+}
+
+.home-title {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+
+.item-container {
+    .item {
+        font-size: 25px;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+        font-weight: bold;
+        box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+
+        a {
+            color: white;
+        }
+
+        .item-footer {
+            margin: 0px -10px -10px -10px;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, .3);
+        }
+    }
+
+    .item-yellow {
+        background-color: #ffbe58;
+    }
+
+    .item-red {
+        background-color: #ef6c7e;
+    }
+
+    .item-green {
+        background-color: #52cf95;
+    }
+
+    .item-blue {
+        background-color: #60b5e4;
+    }
+}

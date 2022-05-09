@@ -1,0 +1,338 @@
+// Initialize fonts
+@import 'fonts';
+
+@import 'variable';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// font awesome
+@import '~@fortawesome/fontawesome-free/css/all';
+
+body {
+    background-color: $body-bg;
+    font-size: $default-font-size;
+
+    &.sb-sidenav-toggled {
+        .sidebar {
+            width: 50vw;
+        }
+    }
+
+    .sidebar {
+        width: 0px;
+        transition: ease-out all 0.3s;
+    }
+
+    .auth-layout {
+        .auth-card {
+            max-width: 400px;
+        }
+
+        .navbar-container {
+            .navbar {
+                background: none;
+            }
+        }
+    }
+}
+
+.app-body {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+}
+
+// customization of bootstrap default
+
+.form-input {
+    border-radius: inherit;
+    margin-bottom: 0.5em;
+    padding: 10px;
+    border: none;
+    background-image: linear-gradient(to right, #839ec7 , white);
+    color: white;
+    font-size: $default-font-size;
+    min-height: 38px;
+    &:focus {
+        outline: none;
+        background-image: linear-gradient(to right, #839ec7 , white);
+        box-shadow: none;
+        color: white;
+    }
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: lightgray;
+        opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: lightgray;
+    }
+
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: lightgray;
+    }
+}
+
+.form-button {
+    @extend .form-input;
+
+    background-image: none;
+    background-color: white;
+    color: #080899;
+    font-weight: bold;
+}
+
+.input-group {
+    border-radius: 10px;
+}
+
+.input-group-prepend {
+    text-align: center;
+    border: none;
+    border-radius: inherit !important;
+    border-top-right-radius: inherit !important;
+    border-bottom-right-radius: inherit !important;
+    background-color: white ;
+    z-index: 1;
+
+    & + .form-input {
+        margin-left: -10px;
+        padding-left: 10px + 10px;
+        z-index: 0;
+
+        &:focus {
+            z-index: 0;
+        }
+    }
+
+    .input-group-text{
+        text-align: center;
+        justify-content: space-between;
+        border: none;
+        border-radius: inherit;
+        border-top-right-radius: inherit !important;
+        border-bottom-right-radius: inherit !important;
+        background-color: white ;
+        color: #080899;
+        font-weight: bold;
+        font-size: $default-font-size;
+        min-width: $default-font-size * 5;
+    }
+}
+
+/* CSS */
+.custom-btn {
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 10px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.custom-btn:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.custom-btn:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .custom-btn {
+    padding: 16px 48px;
+  }
+}
+
+.card {
+    border-radius: 0px !important;
+    border: none;
+    margin-bottom: 0.5em;
+    background-color: transparent;
+    color: white;
+}
+
+label {
+    color: white;
+    font-size: 12px;
+}
+
+a {
+    color: white;
+}
+
+hr {
+    border-color: grey;
+}
+
+// pagination
+ul.pagination  {
+    li {
+        padding: 5px 10px;
+        border: 1px lightgray solid;
+
+        &.active {
+            font-weight: bold;
+        }
+
+        &.disabled {
+            color: gray;
+        }
+    }
+}
+
+.navbar-container {
+
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+
+    .navbar {
+        @extend .container;
+        display: flex;
+        height: $navbar-height;
+        padding: 10px;
+
+        background-color: black;
+
+        .avatar {
+            img{
+                height: 100%;
+                width: auto;
+                border-radius: 50%;
+                border-color: gray;
+                border-width: 2px;
+                border-style: solid;
+            }
+            span {
+                font-weight: bold;
+                color: white;
+            }
+        }
+
+        .language {
+            display: flex;
+            align-items: center;
+
+            .language-item {
+                text-align: center;
+                font-size: 10px;
+                margin-left: 10px;
+
+                &.active {
+                    font-weight: bold;
+
+                    img {
+                        outline: 2px solid #d8af48;
+                    }
+                }
+
+                img {
+                    border-radius: 50%;
+                    width: $navbar-lang-item-size;
+                    height: $navbar-lang-item-size;
+                }
+            }
+        }
+    }
+
+    .navbar-collapse {
+        background-color: black;
+        border-bottom: 2px lightgray solid;
+
+        .navbar-collapse-item {
+            margin: 5px 0px;
+            a {
+                text-transform: uppercase;
+                font-size: 25px;
+            }
+        }
+
+
+    }
+}
+
+.app-content {
+    padding-bottom: 20px;
+}
+
+.stat {
+    display: flex;
+    margin-bottom: 1em;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.5);
+
+    .stat-content {
+        flex-grow: 1;
+
+        .stat-item-title {
+            text-align: center;
+            color: #d8af48;
+        }
+
+        .stat-item-value {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+        }
+    }
+
+    .stat-action {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    img {
+        width: $stat-img-size;
+        height: $stat-img-size;
+    }
+}
+
+// flash
+.alert {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+
+    ul {
+        list-style-type: none;
+        color: white;
+        padding: 0px;
+        font-size: 12px;
+    }
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
